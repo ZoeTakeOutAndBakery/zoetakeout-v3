@@ -1,0 +1,19 @@
+---
+import "../styles/global.css";
+
+const { title, description, canonical } = Astro.props;
+const pageTitle = title || "Zoe Take Out & Bakery";
+---
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>{pageTitle}</title>
+    {description ? <meta name="description" content={description} /> : null}
+    {canonical ? <link rel="canonical" href={canonical} /> : null}
+  </head>
+  <body>
+    <slot />
+  </body>
+</html>

@@ -1,0 +1,58 @@
+---
+const { categories } = Astro.props;
+const previewCategories = (categories || []).slice(0, 3);
+---
+<section class="py-16 bg-background">
+  <div class="page-container">
+    <div class="flex items-center justify-between flex-wrap gap-4 mb-10">
+      <div>
+        <h2 class="text-3xl md:text-4xl font-bold text-primary">Menu Highlights</h2>
+        <p class="text-muted-foreground text-lg">A taste of what we serve daily.</p>
+      </div>
+      <a
+        href="/menu"
+        class="inline-flex items-center justify-center rounded-md border border-border px-4 py-2 text-sm font-medium text-foreground transition-colors hover:bg-secondary"
+      >
+        View Full Menu
+      </a>
+    </div>
+
+    <div class="card-grid card-grid-lg lg:grid-cols-3">
+      {previewCategories.map((category) => (
+        <article class="card-base bg-warm-white p-0 overflow-hidden">
+          {category.image?.asset?.url ? (
+            <img
+              src={category.image.asset.url}
+              alt={category.image.alt || category.title}
+              class="h-44 w-full object-cover"
+              loading="lazy"
+            />
+          ) : null}
+          <div class="p-6 space-y-4 md:p-7">
+            <div>
+              <h3 class="card-title">{category.title}</h3>
+              {category.description ? (
+                <p class="card-meta mt-2">{category.description}</p>
+              ) : null}
+            </div>
+            <div class="space-y-3">
+              {(category.items || []).slice(0, 3).map((item) => (
+                <div class="flex items-start justify-between gap-4">
+                  <div>
+                    <p class="card-body font-medium">{item.name}</p>
+                    {item.description ? (
+                      <p class="card-meta">{item.description}</p>
+                    ) : null}
+                  </div>
+                  {item.price ? (
+                    <span class="card-meta font-semibold text-primary">{item.price}</span>
+                  ) : null}
+                </div>
+              ))}
+            </div>
+          </div>
+        </article>
+      ))}
+    </div>
+  </div>
+</section>

@@ -1,0 +1,35 @@
+---
+import BaseLayout from "../layouts/BaseLayout.astro";
+import Header from "../components/Header.astro";
+import MenuFull from "../components/MenuFull.astro";
+import Footer from "../components/Footer.astro";
+import { DOORDASH_FALLBACK_URL } from "../lib/constants.js";
+import { getSiteSettings, getMenuCategories, getDeliveryLinks } from "../lib/sanity";
+import { sanitizeExternalUrl } from "../lib/urlSafety.js";
+
+const [siteSettings, menuCategories, deliveryLinks] = await Promise.all([
+  getSiteSettings(),
+  getMenuCategories(),
+  getDeliveryLinks(),
+]);
+
+const doorDashLink = (deliveryLinks || []).find((link) =>
+  String(link.label || "").toLowerCase().includes("doordash")
+);
+
+const orderUrl = sanitizeExternalUrl(doorDashLink?.url, {
+  fallback: DOORDASH_FALLBACK_URL,
+  allowedHosts: ["doordash.com"],
+});
+---
+<BaseLayout
+  title={`Menu | ${siteSettings?.title || "Zoe Take Out & Bakery"}`}
+  description={siteSettings?.description}
+  canonical={Astro.url}
+>
+  <Header orderUrl={orderUrl} />
+  <main>
+    <MenuFull categories={menuCategories} />
+  </main>
+  <Footer siteTitle={siteSettings?.title} />
+</BaseLayout>

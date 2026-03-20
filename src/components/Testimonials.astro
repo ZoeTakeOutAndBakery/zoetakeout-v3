@@ -1,0 +1,39 @@
+---
+const { testimonials } = Astro.props;
+
+function normalizeRating(value) {
+  return Math.max(1, Math.min(5, Number(value) || 5));
+}
+---
+<section class="py-16 bg-section-bg">
+  <div class="page-container">
+    <div class="text-center mb-10">
+      <h2 class="text-3xl md:text-4xl font-bold text-primary mb-3">What Customers Say</h2>
+      <p class="text-muted-foreground text-lg">Real words from our community.</p>
+    </div>
+
+    <div class="card-grid md:grid-cols-2 lg:grid-cols-3">
+      {(testimonials || []).map((testimonial) => {
+        const rating = normalizeRating(testimonial.rating);
+
+        return (
+          <article class="card-base bg-background">
+            <div class="mb-3 flex items-center gap-1 text-amber-500" aria-label={`Rated ${rating} out of 5 stars`}>
+              {Array.from({ length: 5 }).map((_, index) => (
+                <svg
+                  class={index < rating ? "h-4 w-4 fill-current" : "h-4 w-4 fill-current text-amber-200"}
+                  viewBox="0 0 20 20"
+                  aria-hidden="true"
+                >
+                  <path d="M9.05 2.927c.3-.921 1.603-.921 1.902 0l1.12 3.446a1 1 0 00.95.69h3.624c.969 0 1.371 1.24.588 1.81l-2.932 2.13a1 1 0 00-.364 1.118l1.12 3.446c.3.922-.755 1.688-1.539 1.118l-2.932-2.13a1 1 0 00-1.176 0l-2.932 2.13c-.783.57-1.838-.196-1.539-1.118l1.12-3.446a1 1 0 00-.364-1.118L2.78 8.873c-.783-.57-.38-1.81.588-1.81h3.624a1 1 0 00.95-.69l1.12-3.446z"></path>
+                </svg>
+              ))}
+            </div>
+            <p class="card-body leading-relaxed">"{testimonial.quote}"</p>
+            <p class="card-meta mt-4 font-semibold text-primary">- {testimonial.author}</p>
+          </article>
+        );
+      })}
+    </div>
+  </div>
+</section>

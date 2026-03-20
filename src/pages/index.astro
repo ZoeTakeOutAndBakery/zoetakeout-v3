@@ -1,0 +1,63 @@
+---
+import BaseLayout from "../layouts/BaseLayout.astro";
+import Header from "../components/Header.astro";
+import Hero from "../components/Hero.astro";
+import Hours from "../components/Hours.astro";
+import MenuPreview from "../components/MenuPreview.astro";
+import Reservations from "../components/Reservations.astro";
+import Delivery from "../components/Delivery.astro";
+import Testimonials from "../components/Testimonials.astro";
+import Contact from "../components/Contact.astro";
+import Footer from "../components/Footer.astro";
+import { DOORDASH_FALLBACK_URL } from "../lib/constants.js";
+import { getSiteSettings, getHours, getMenuCategories, getTestimonials, getDeliveryLinks } from "../lib/sanity";
+import { sanitizeExternalUrl } from "../lib/urlSafety.js";
+
+const [siteSettings, hours, menuCategories, testimonials, deliveryLinks] = await Promise.all([
+  getSiteSettings(),
+  getHours(),
+  getMenuCategories(),
+  getTestimonials(),
+  getDeliveryLinks(),
+]);
+
+const doorDashLink = (deliveryLinks || []).find((link) =>
+  String(link.label || "").toLowerCase().includes("doordash")
+);
+
+const orderUrl = sanitizeExternalUrl(doorDashLink?.url, {
+  fallback: DOORDASH_FALLBACK_URL,
+  allowedHosts: ["doordash.com"],
+});
+
+const heroCta = {
+  text: siteSettings?.primaryCtaText,
+  url: sanitizeExternalUrl(siteSettings?.primaryCtaUrl, { fallback: "/menu", allowRelative: true }),
+};
+const secondaryCta = {
+  text: siteSettings?.secondaryCtaText,
+  url: sanitizeExternalUrl(siteSettings?.secondaryCtaUrl, { fallback: "/#hours", allowRelative: true }),
+};
+---
+<BaseLayout
+  title={siteSettings?.title || "Zoe Take Out & Bakery"}
+  description={siteSettings?.description}
+  canonical={Astro.url}
+>
+  <Header orderUrl={orderUrl} />
+  <main>
+    <Hero
+      heading={siteSettings?.heroHeading}
+      subhead={siteSettings?.heroSubhead}
+      primaryCta={heroCta}
+      secondaryCta={secondaryCta}
+    />
+    <Hours hours={hours} />
+    <MenuPreview categories={menuCategories} />
+    <Reservations contactPhone={siteSettings?.contactPhone} />
+    <Delivery links={deliveryLinks} />
+    <Testimonials testimonials={testimonials} />
+    <Contact contact={siteSettings} />
+  </main>
+  <Footer siteTitle={siteSettings?.title} />
+</BaseLayout>

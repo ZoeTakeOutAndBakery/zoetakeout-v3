@@ -1,0 +1,163 @@
+---
+const { contactPhone } = Astro.props;
+import { CATERING_EVENT_TYPES } from "../lib/constants.js";
+
+const submitEndpoint = "/.netlify/functions/catering-inquiry";
+const eventTypes = CATERING_EVENT_TYPES;
+---
+<section id="reservations" class="py-16 bg-background">
+  <div class="page-container">
+    <div class="text-center mb-12">
+      <h2 class="text-3xl md:text-4xl font-bold text-primary mb-4">Event Catering & Reservations</h2>
+      <p class="text-muted-foreground text-lg max-w-3xl mx-auto">
+        Let us make your special occasion memorable with our delicious catering services.
+      </p>
+    </div>
+
+    <div class="card-grid card-grid-lg max-w-6xl mx-auto lg:grid-cols-2">
+      <div class="space-y-6">
+        <div class="card-base bg-background">
+          <h3 class="card-title mb-4">We Cater For</h3>
+          <ul class="grid sm:grid-cols-2 gap-3 text-muted-foreground">
+            {eventTypes.map((type) => (
+              <li class="rounded-lg border border-border px-3 py-2 bg-warm-white text-sm font-medium text-foreground">
+                {type}
+              </li>
+            ))}
+          </ul>
+        </div>
+
+        <div class="card-base bg-accent/5 text-center">
+          <h4 class="card-title mb-2">Prefer to Call?</h4>
+          <p class="card-meta mb-4">
+            Speak directly with our catering team for immediate assistance.
+          </p>
+          {contactPhone ? (
+            <a
+              href={`tel:${contactPhone}`}
+              class="inline-flex items-center justify-center rounded-md bg-accent px-4 py-2 text-sm font-semibold text-accent-foreground transition-colors hover:bg-accent/90"
+            >
+              Call {contactPhone}
+            </a>
+          ) : null}
+        </div>
+      </div>
+
+      <form
+        id="catering-inquiry-form"
+        class="card-base bg-background space-y-4"
+        action={submitEndpoint}
+        method="POST"
+      >
+        <h3 class="card-title">Request Event Catering</h3>
+        <p class="card-meta">
+          Fill out the form below and we will contact you to confirm your event details.
+        </p>
+
+        <div class="grid md:grid-cols-2 gap-4">
+          <div class="space-y-2">
+            <label class="text-sm font-medium text-foreground" for="name">Full Name *</label>
+            <input class="w-full rounded-md border border-border px-3 py-2" id="name" name="name" required />
+          </div>
+          <div class="space-y-2">
+            <label class="text-sm font-medium text-foreground" for="phone">Phone Number *</label>
+            <input class="w-full rounded-md border border-border px-3 py-2" id="phone" name="phone" type="tel" required />
+          </div>
+        </div>
+
+        <div class="space-y-2">
+          <label class="text-sm font-medium text-foreground" for="email">Email Address *</label>
+          <input class="w-full rounded-md border border-border px-3 py-2" id="email" name="email" type="email" required />
+        </div>
+
+        <div class="grid md:grid-cols-2 gap-4">
+          <div class="space-y-2">
+            <label class="text-sm font-medium text-foreground" for="eventType">Event Type *</label>
+            <select class="w-full rounded-md border border-border px-3 py-2" id="eventType" name="eventType" required>
+              <option value="">Select event type</option>
+              {eventTypes.map((type) => (
+                <option value={type}>{type}</option>
+              ))}
+            </select>
+          </div>
+          <div class="space-y-2">
+            <label class="text-sm font-medium text-foreground" for="guests">Number of Guests</label>
+            <input class="w-full rounded-md border border-border px-3 py-2" id="guests" name="guests" type="number" />
+          </div>
+        </div>
+
+        <div class="space-y-2">
+          <label class="text-sm font-medium text-foreground" for="date">Preferred Date</label>
+          <input class="w-full rounded-md border border-border px-3 py-2" id="date" name="date" type="date" />
+        </div>
+
+        <div class="space-y-2">
+          <label class="text-sm font-medium text-foreground" for="details">Event Details</label>
+          <textarea class="w-full rounded-md border border-border px-3 py-2" id="details" name="details" rows="4"></textarea>
+        </div>
+
+        <input type="text" name="company" class="hidden" tabindex="-1" autocomplete="off" aria-hidden="true" />
+        <p class="text-sm text-muted-foreground" data-form-status aria-live="polite"></p>
+
+        <button
+          type="submit"
+          data-submit-button
+          class="w-full inline-flex items-center justify-center rounded-md bg-accent px-4 py-2 text-sm font-semibold text-accent-foreground transition-colors hover:bg-accent/90"
+        >
+          Submit Reservation Request
+        </button>
+      </form>
+    </div>
+  </div>
+</section>
+
+<script is:inline define:vars={{ submitEndpoint }}>
+  const form = document.querySelector("#catering-inquiry-form");
+
+  if (form instanceof HTMLFormElement) {
+    const statusEl = form.querySelector("[data-form-status]");
+    const submitButton = form.querySelector("[data-submit-button]");
+
+    form.addEventListener("submit", async (event) => {
+      event.preventDefault();
+
+      if (submitButton instanceof HTMLButtonElement) {
+        submitButton.disabled = true;
+      }
+      if (statusEl) {
+        statusEl.textContent = "Submitting your request...";
+      }
+
+      const formData = new FormData(form);
+      const payload = Object.fromEntries(formData.entries());
+
+      try {
+        const response = await fetch(submitEndpoint, {
+          method: "POST",
+          headers: {
+            "Content-Type": "application/json",
+          },
+          body: JSON.stringify(payload),
+        });
+
+        if (!response.ok) {
+          throw new Error("Submission failed");
+        }
+
+        if (statusEl) {
+          statusEl.textContent = "Thanks! Your catering inquiry was submitted successfully.";
+        }
+        form.reset();
+      } catch (error) {
+        console.error("Unable to submit catering inquiry", error);
+        if (statusEl) {
+          statusEl.textContent = "We couldn't submit your request right now. Please try again.";
+        }
+      } finally {
+        if (submitButton instanceof HTMLButtonElement) {
+          submitButton.disabled = false;
+        }
+      }
+    });
+  }
+</script>

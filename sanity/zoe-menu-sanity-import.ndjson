@@ -1,0 +1,101 @@
+{"_id":"menuItem-que-beuf-oxtail","_type":"menuItem","name":"Que beuf (oxtail)","description":"","price":"$30.00"}
+{"_id":"menuItem-legume-mixed-vegetables","_type":"menuItem","name":"Legume (mixed vegetables)","description":"","price":"$18.00"}
+{"_id":"menuItem-legume-seafood-vyann","_type":"menuItem","name":"Legume seafood \u0026 vyann (mixed vegetables with seafood \u0026 meat)","description":"","price":"$24.50"}
+{"_id":"menuItem-legume-seafood","_type":"menuItem","name":"Legume seafood (mixed vegetables \u0026 seafood only)","description":"","price":"$22.00"}
+{"_id":"menuItem-legume-mixed-vegetables-only","_type":"menuItem","name":"Legume ( mixed vegetables only)","description":"","price":"$16.00"}
+{"_id":"menuItem-poullet-en-sauce","_type":"menuItem","name":"Poullet en sauce (chicken with sauce)","description":"","price":"$16.00"}
+{"_id":"menuItem-poullet-fri-fried-chicken","_type":"menuItem","name":"Poullet fri ( fried chicken)","description":"","price":"$16.00"}
+{"_id":"menuItem-kabrit-fri-simple","_type":"menuItem","name":"Kabrit fri (fried goat) simple","description":"","price":"$24.00"}
+{"_id":"menuItem-griot-complet","_type":"menuItem","name":"Griot complet (fried pork complete) fried plantains, rice \u0026 pikliz)","description":"","price":"$19.00"}
+{"_id":"menuItem-griot-simple","_type":"menuItem","name":"Griot simple (fried pork simple) with fried plantains \u0026 pikliz","description":"","price":"$17.00"}
+{"_id":"menuItem-dinde-tasso-simple","_type":"menuItem","name":"Dinde Tasso simple ( fried turkey simple) with fried plantains \u0026 pikliz","description":"","price":"$22.00"}
+{"_id":"menuItem-dinde-en-sauce","_type":"menuItem","name":"Dinde en sauce ( turkey with gravy)","description":"","price":"$24.00"}
+{"_id":"menuItem-pwason-fri","_type":"menuItem","name":"Pwason fri (fried fish)","description":"","price":"$45.00"}
+{"_id":"menuItem-lalo","_type":"menuItem","name":"Lalo","description":"","price":"$23.00"}
+{"_id":"menuItem-side-lalo","_type":"menuItem","name":"Side lalo","description":"","price":"$16.00"}
+{"_id":"menuItem-epina-special","_type":"menuItem","name":"Epina special","description":"","price":"$21.00"}
+{"_id":"menuItem-side-epina","_type":"menuItem","name":"Side Epina","description":"","price":"$15.00"}
+{"_id":"menuItem-wings-complete-8","_type":"menuItem","name":"Wings complete (8) (Rice \u0026 beans, plantains and pikliz)","description":"","price":"$17.00"}
+{"_id":"menuItem-wings-simple-8","_type":"menuItem","name":"Wings simple (8) (plantains with pikliz)","description":"","price":"$15.50"}
+{"_id":"menuItem-sos-kalalou","_type":"menuItem","name":"Sòs kalalou","description":"","price":"$20.00"}
+{"_id":"menuItem-pwason-an-sos-simple","_type":"menuItem","name":"Pwason an sós (fried or sos) simple","description":"","price":"$35.00"}
+{"_id":"menuItem-chicken-wings-4","_type":"menuItem","name":"Chicken Wings (4)","description":"","price":"$7.50"}
+{"_id":"menuItem-kabrit-complete","_type":"menuItem","name":"Kabrit complete (goat)","description":"","price":"$26.00"}
+{"_id":"menuItem-labouyi","_type":"menuItem","name":"Labouyi (porridge) available everyday after 5pm","description":"","price":"$10.00"}
+{"_id":"menuItem-dinde-tasso-complete-copy","_type":"menuItem","name":"Dinde Tasso complete (fried turkey complete) including fried plantains,rice $ pikliz (Copy)","description":"","price":"$24.00"}
+{"_id":"menuItem-kabrit-en-sauce-complete-copy","_type":"menuItem","name":"Kabrit en sauce ( goat with gravy) complete (Copy)","description":"","price":"$26.00"}
+{"_id":"menuItem-fish-simple-small","_type":"menuItem","name":"Fish simple (small) plantains only","description":"","price":"$30.00"}
+{"_id":"menuItem-fish-complete-small","_type":"menuItem","name":"Fish complete (small) plantains and rice","description":"","price":"$35.00"}
+{"_id":"menuItem-fish-simple-medium","_type":"menuItem","name":"Fish simple (medium) plantains only","description":"","price":"$35.00"}
+{"_id":"menuItem-fish-complete-medium","_type":"menuItem","name":"Fish complete (medium) plantains and rice","description":"","price":"$40.00"}
+{"_id":"menuItem-fish-large-simple","_type":"menuItem","name":"Fish large (simple) plantains only","description":"","price":"$45.00"}
+{"_id":"menuItem-fish-large-complete","_type":"menuItem","name":"Fish large (complete) plantains and rice","description":"","price":"$50.00"}
+{"_id":"menuItem-fish-xlarge-simple","_type":"menuItem","name":"Fish xlarge (simple) plantains only","description":"","price":"$60.00"}
+{"_id":"menuItem-fish-xlarge-complete","_type":"menuItem","name":"Fish x-large (complete) plantains and rice","description":"","price":"$68.00"}
+{"_id":"menuItem-poullet-simple","_type":"menuItem","name":"Poullet simple (chicken)","description":"","price":"$14.50"}
+{"_id":"menuItem-banane-fri-4pcs","_type":"menuItem","name":"Banane fri (Fried Green Plantains) 4pcs","description":"","price":"$2.75"}
+{"_id":"menuItem-diri-blanc","_type":"menuItem","name":"Diri Blanc (White rice)","description":"","price":"$4.00"}
+{"_id":"menuItem-diri-avek-pwa","_type":"menuItem","name":"Diri avek pwa (Rice \u0026 beans)","description":"","price":"$5.00"}
+{"_id":"menuItem-house-salad","_type":"menuItem","name":"House Salad (with choice of dressing)","description":"ranch, balsamic vinegar or thousand island","price":"$3.00"}
+{"_id":"menuItem-manyok-fri-3","_type":"menuItem","name":"Manyok fri (3) (Fried yuka) 3pc","description":"","price":"$3.75"}
+{"_id":"menuItem-pikliz","_type":"menuItem","name":"Pikliz","description":"","price":"$1.00"}
+{"_id":"menuItem-marinade-5","_type":"menuItem","name":"Marinade (5) (Fried Dumpling) 5 pieces","description":"","price":"$3.50"}
+{"_id":"menuItem-zoe-fries","_type":"menuItem","name":"Zoe Fries","description":"","price":"$4.00"}
+{"_id":"menuItem-akra-5","_type":"menuItem","name":"Akra (5)","description":"Malanga blended with Haitian spice","price":"$4.00"}
+{"_id":"menuItem-mac-n-cheese","_type":"menuItem","name":"Mac N\u0027 Cheese","description":"","price":"$5.00"}
+{"_id":"menuItem-sauce-pwa","_type":"menuItem","name":"Sauce pwa (Bean sauce)","description":"","price":"$4.00"}
+{"_id":"menuItem-boiled-egg","_type":"menuItem","name":"Boiled egg","description":"","price":"$1.25"}
+{"_id":"menuItem-extra-hotdog","_type":"menuItem","name":"Extra hotdog","description":"","price":"$1.00"}
+{"_id":"menuItem-haitian-spaghetti-hotdog","_type":"menuItem","name":"Haitian Spaghetti with hotdog(serve with 1 boiled egg)","description":"","price":"$12.00"}
+{"_id":"menuItem-djondjon-rice","_type":"menuItem","name":"DjonDjon rice (black rice)","description":"","price":"$6.00"}
+{"_id":"menuItem-conch-fritters-3","_type":"menuItem","name":"Conch Fritters (3)","description":"","price":"$4.00"}
+{"_id":"menuItem-pate-hotdog","_type":"menuItem","name":"Pâté Hotdog (includes egg)","description":"","price":"$12.00"}
+{"_id":"menuItem-pate-chicken","_type":"menuItem","name":"Patè Chicken (includes egg)","description":"","price":"$12.00"}
+{"_id":"menuItem-fritay-kabrit","_type":"menuItem","name":"Fritay Kabrit (goat)","description":"","price":"$34.50"}
+{"_id":"menuItem-fritay-griot","_type":"menuItem","name":"Fritay Griot (Pork)","description":"","price":"$28.50"}
+{"_id":"menuItem-fritay-turkey","_type":"menuItem","name":"Fritay Turkey","description":"","price":"$34.50"}
+{"_id":"menuItem-fritay-chicken","_type":"menuItem","name":"Fritay Chicken","description":"","price":"$24.00"}
+{"_id":"menuItem-fritay-pwason","_type":"menuItem","name":"Fritay Pwason","description":"","price":"$45.00"}
+{"_id":"menuItem-lunch-poullet-en-sauce","_type":"menuItem","name":"Poullet en sauce (Chicken with gravy)","description":"Tasty fried chicken including Haitian sauce.","price":"$12.00"}
+{"_id":"menuItem-lunch-poullet-fri","_type":"menuItem","name":"Poullet fri (Fried Chicken)","description":"Marinaded in Haitian creole spices","price":"$12.00"}
+{"_id":"menuItem-lunch-legume-meat-mixed-vegetables","_type":"menuItem","name":"Legume (Meat Mixed Vegetables)","description":"Mixture of eggplants, cayote, carrots, spinach, water crest and meat","price":"$12.00"}
+{"_id":"menuItem-bbq-chicken-6","_type":"menuItem","name":"BBQ Chicken (6)","description":"","price":"$12.00"}
+{"_id":"menuItem-creole-tilapia-fried","_type":"menuItem","name":"Creole Tilapia (fried)","description":"marinaded in creole spices flavor","price":"$12.00"}
+{"_id":"menuItem-creole-chicken-wings-6","_type":"menuItem","name":"Creole chicken wings (6)","description":"Marinaded in Haitian creole spices","price":"$12.00"}
+{"_id":"menuItem-fruit-punch","_type":"menuItem","name":"Fruit Punch","description":"","price":"$4.00"}
+{"_id":"menuItem-lemonade","_type":"menuItem","name":"Lemonade","description":"","price":"$5.00"}
+{"_id":"menuItem-passion-fruit","_type":"menuItem","name":"Passion Fruit","description":"","price":"$5.50"}
+{"_id":"menuItem-coke-can","_type":"menuItem","name":"Coke(Can)","description":"","price":"$2.00"}
+{"_id":"menuItem-sunkist-can","_type":"menuItem","name":"Sunkist(Can)","description":"","price":"$2.00"}
+{"_id":"menuItem-pepsi-can","_type":"menuItem","name":"Pepsi(Can)","description":"","price":"$2.00"}
+{"_id":"menuItem-brisk-iced-tea-can","_type":"menuItem","name":"Brisk Iced Tea(Can)","description":"","price":"$2.00"}
+{"_id":"menuItem-sprite-can","_type":"menuItem","name":"Sprite(Can)","description":"","price":"$2.00"}
+{"_id":"menuItem-jupina-soda","_type":"menuItem","name":"Jupina Soda","description":"","price":"$2.00"}
+{"_id":"menuItem-watermelon-soda","_type":"menuItem","name":"Watermelon Soda","description":"","price":"$2.00"}
+{"_id":"menuItem-bottled-water","_type":"menuItem","name":"Bottled Water","description":"","price":"$1.00"}
+{"_id":"menuItem-cola-couronne","_type":"menuItem","name":"Cola Couronne","description":"","price":"$3.00"}
+{"_id":"menuItem-coke-bottle","_type":"menuItem","name":"Coke(Bottle)","description":"","price":"$3.00"}
+{"_id":"menuItem-sprite-bottle","_type":"menuItem","name":"Sprite(Bottle)","description":"","price":"$3.00"}
+{"_id":"menuItem-7up-bottle","_type":"menuItem","name":"7Up(Bottle)","description":"","price":"$3.00"}
+{"_id":"menuItem-mountain-dew-bottle","_type":"menuItem","name":"Mountain Dew(Bottle)","description":"","price":"$3.00"}
+{"_id":"menuItem-pepsi-bottle","_type":"menuItem","name":"Pepsi(Bottle)","description":"","price":"$3.00"}
+{"_id":"menuItem-red-bull","_type":"menuItem","name":"Red Bull","description":"","price":"$4.00"}
+{"_id":"menuItem-mistic-orange-carrot","_type":"menuItem","name":"Mistic orange carrot","description":"","price":"$2.75"}
+{"_id":"menuItem-mistic-tropical-fruit-punch","_type":"menuItem","name":"Mistic tropical fruit punch","description":"","price":"$2.75"}
+{"_id":"menuItem-mistic-orange-mango","_type":"menuItem","name":"Mistic orange mango","description":"","price":"$2.75"}
+{"_id":"menuItem-tampico-citrus-punch","_type":"menuItem","name":"Tampico citrus punch","description":"","price":"$2.00"}
+{"_id":"menuItem-tampico-tropical-punch","_type":"menuItem","name":"Tampico tropical punch","description":"","price":"$2.00"}
+{"_id":"menuItem-goliath-fruit-punch","_type":"menuItem","name":"Goliath fruit punch","description":"","price":"$2.00"}
+{"_id":"menuItem-goliath-pineapple","_type":"menuItem","name":"Goliath pineapple","description":"","price":"$2.00"}
+{"_id":"menuItem-malta-india","_type":"menuItem","name":"Malta India","description":"","price":"$1.75"}
+{"_id":"menuItem-parrot-coconut-water","_type":"menuItem","name":"Parrot coconut water","description":"","price":"$3.25"}
+{"_id":"menuItem-gatorade","_type":"menuItem","name":"Gatorade","description":"","price":"$3.00"}
+{"_id":"menuItem-cake-18x9","_type":"menuItem","name":"18x9","description":"","price":"$140.00"}
+{"_id":"menuCategory-entrees","_type":"menuCategory","title":"Entrees","description":"Food","order":1,"items":[{"_type":"reference","_ref":"menuItem-que-beuf-oxtail"},{"_type":"reference","_ref":"menuItem-legume-mixed-vegetables"},{"_type":"reference","_ref":"menuItem-legume-seafood-vyann"},{"_type":"reference","_ref":"menuItem-legume-seafood"},{"_type":"reference","_ref":"menuItem-legume-mixed-vegetables-only"},{"_type":"reference","_ref":"menuItem-poullet-en-sauce"},{"_type":"reference","_ref":"menuItem-poullet-fri-fried-chicken"},{"_type":"reference","_ref":"menuItem-kabrit-fri-simple"},{"_type":"reference","_ref":"menuItem-griot-complet"},{"_type":"reference","_ref":"menuItem-griot-simple"},{"_type":"reference","_ref":"menuItem-dinde-tasso-simple"},{"_type":"reference","_ref":"menuItem-dinde-en-sauce"},{"_type":"reference","_ref":"menuItem-pwason-fri"},{"_type":"reference","_ref":"menuItem-lalo"},{"_type":"reference","_ref":"menuItem-side-lalo"},{"_type":"reference","_ref":"menuItem-epina-special"},{"_type":"reference","_ref":"menuItem-side-epina"},{"_type":"reference","_ref":"menuItem-wings-complete-8"},{"_type":"reference","_ref":"menuItem-wings-simple-8"},{"_type":"reference","_ref":"menuItem-sos-kalalou"},{"_type":"reference","_ref":"menuItem-pwason-an-sos-simple"},{"_type":"reference","_ref":"menuItem-chicken-wings-4"},{"_type":"reference","_ref":"menuItem-kabrit-complete"},{"_type":"reference","_ref":"menuItem-labouyi"},{"_type":"reference","_ref":"menuItem-dinde-tasso-complete-copy"},{"_type":"reference","_ref":"menuItem-kabrit-en-sauce-complete-copy"},{"_type":"reference","_ref":"menuItem-fish-simple-small"},{"_type":"reference","_ref":"menuItem-fish-complete-small"},{"_type":"reference","_ref":"menuItem-fish-simple-medium"},{"_type":"reference","_ref":"menuItem-fish-complete-medium"},{"_type":"reference","_ref":"menuItem-fish-large-simple"},{"_type":"reference","_ref":"menuItem-fish-large-complete"},{"_type":"reference","_ref":"menuItem-fish-xlarge-simple"},{"_type":"reference","_ref":"menuItem-fish-xlarge-complete"},{"_type":"reference","_ref":"menuItem-poullet-simple"}]}
+{"_id":"menuCategory-sides","_type":"menuCategory","title":"Sides","description":"Food","order":2,"items":[{"_type":"reference","_ref":"menuItem-banane-fri-4pcs"},{"_type":"reference","_ref":"menuItem-diri-blanc"},{"_type":"reference","_ref":"menuItem-diri-avek-pwa"},{"_type":"reference","_ref":"menuItem-house-salad"},{"_type":"reference","_ref":"menuItem-manyok-fri-3"},{"_type":"reference","_ref":"menuItem-pikliz"},{"_type":"reference","_ref":"menuItem-marinade-5"},{"_type":"reference","_ref":"menuItem-zoe-fries"},{"_type":"reference","_ref":"menuItem-akra-5"},{"_type":"reference","_ref":"menuItem-mac-n-cheese"},{"_type":"reference","_ref":"menuItem-sauce-pwa"},{"_type":"reference","_ref":"menuItem-boiled-egg"},{"_type":"reference","_ref":"menuItem-extra-hotdog"},{"_type":"reference","_ref":"menuItem-haitian-spaghetti-hotdog"},{"_type":"reference","_ref":"menuItem-djondjon-rice"},{"_type":"reference","_ref":"menuItem-conch-fritters-3"}]}
+{"_id":"menuCategory-pate-kode","_type":"menuCategory","title":"Paté kòde (Haitian Pattie’s)","description":"Food","order":3,"items":[{"_type":"reference","_ref":"menuItem-pate-hotdog"},{"_type":"reference","_ref":"menuItem-pate-chicken"}]}
+{"_id":"menuCategory-fritay","_type":"menuCategory","title":"FRITAY","description":"Food","order":4,"items":[{"_type":"reference","_ref":"menuItem-fritay-kabrit"},{"_type":"reference","_ref":"menuItem-fritay-griot"},{"_type":"reference","_ref":"menuItem-fritay-turkey"},{"_type":"reference","_ref":"menuItem-fritay-chicken"},{"_type":"reference","_ref":"menuItem-fritay-pwason"}]}
+{"_id":"menuCategory-lunch-specials","_type":"menuCategory","title":"Lunch Specials","description":"","order":5,"items":[{"_type":"reference","_ref":"menuItem-lunch-poullet-en-sauce"},{"_type":"reference","_ref":"menuItem-lunch-poullet-fri"},{"_type":"reference","_ref":"menuItem-lunch-legume-meat-mixed-vegetables"},{"_type":"reference","_ref":"menuItem-bbq-chicken-6"},{"_type":"reference","_ref":"menuItem-creole-tilapia-fried"},{"_type":"reference","_ref":"menuItem-creole-chicken-wings-6"}]}
+{"_id":"menuCategory-na-drinks","_type":"menuCategory","title":"NA Drinks","description":"Non-Alcoholic Drinks","order":6,"items":[{"_type":"reference","_ref":"menuItem-fruit-punch"},{"_type":"reference","_ref":"menuItem-lemonade"},{"_type":"reference","_ref":"menuItem-passion-fruit"},{"_type":"reference","_ref":"menuItem-coke-can"},{"_type":"reference","_ref":"menuItem-sunkist-can"},{"_type":"reference","_ref":"menuItem-pepsi-can"},{"_type":"reference","_ref":"menuItem-brisk-iced-tea-can"},{"_type":"reference","_ref":"menuItem-sprite-can"},{"_type":"reference","_ref":"menuItem-jupina-soda"},{"_type":"reference","_ref":"menuItem-watermelon-soda"},{"_type":"reference","_ref":"menuItem-bottled-water"},{"_type":"reference","_ref":"menuItem-cola-couronne"},{"_type":"reference","_ref":"menuItem-coke-bottle"},{"_type":"reference","_ref":"menuItem-sprite-bottle"},{"_type":"reference","_ref":"menuItem-7up-bottle"},{"_type":"reference","_ref":"menuItem-mountain-dew-bottle"},{"_type":"reference","_ref":"menuItem-pepsi-bottle"},{"_type":"reference","_ref":"menuItem-red-bull"}]}
+{"_id":"menuCategory-juices","_type":"menuCategory","title":"Juices","description":"Non-Alcoholic Drinks","order":7,"items":[{"_type":"reference","_ref":"menuItem-mistic-orange-carrot"},{"_type":"reference","_ref":"menuItem-mistic-tropical-fruit-punch"},{"_type":"reference","_ref":"menuItem-mistic-orange-mango"},{"_type":"reference","_ref":"menuItem-tampico-citrus-punch"},{"_type":"reference","_ref":"menuItem-tampico-tropical-punch"},{"_type":"reference","_ref":"menuItem-goliath-fruit-punch"},{"_type":"reference","_ref":"menuItem-goliath-pineapple"},{"_type":"reference","_ref":"menuItem-malta-india"},{"_type":"reference","_ref":"menuItem-parrot-coconut-water"},{"_type":"reference","_ref":"menuItem-gatorade"}]}
+{"_id":"menuCategory-cakes","_type":"menuCategory","title":"Cakes","description":"Bakery","order":8,"items":[{"_type":"reference","_ref":"menuItem-cake-18x9"}]}

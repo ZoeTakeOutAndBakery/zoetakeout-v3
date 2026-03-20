@@ -1,0 +1,78 @@
+---
+const { links } = Astro.props;
+import { DOORDASH_FALLBACK_URL } from "../lib/constants.js";
+import { sanitizeExternalUrl } from "../lib/urlSafety.js";
+
+const doorDashLink = (links || []).find((link) =>
+  String(link?.label || "").toLowerCase().includes("doordash")
+);
+
+const doorDashUrl = sanitizeExternalUrl(doorDashLink?.url, {
+  fallback: DOORDASH_FALLBACK_URL,
+  allowedHosts: ["doordash.com"],
+});
+
+const doorDashLogo = sanitizeExternalUrl(doorDashLink?.logo?.asset?.url, {
+  fallback: "https://res.cloudinary.com/ddmq5t27j/image/upload/v1756403553/image_2025-08-28_135232324_v5sjkk.png",
+});
+---
+<section class="py-16 bg-section-bg">
+  <div class="page-container">
+    <div class="text-center mb-12">
+      <h2 class="text-3xl md:text-4xl font-bold text-primary mb-4">Order for Delivery</h2>
+      <p class="text-muted-foreground text-lg max-w-2xl mx-auto">
+        Craving our fresh-baked goods? Get them delivered straight to your door through our delivery partners
+      </p>
+    </div>
+
+    <div class="max-w-2xl mx-auto">
+      <article
+        class="card-base text-center bg-warm-white hover:shadow-[var(--card-shadow-hover)] transition-all duration-300 hover:scale-[1.02]"
+      >
+        <div class="pb-4">
+          <div class="w-16 h-16 mx-auto mb-4 flex items-center justify-center">
+            <img
+              src={doorDashLogo}
+              alt="DoorDash"
+              class="w-12 h-12 object-contain"
+              loading="lazy"
+            />
+          </div>
+          <h3 class="card-title mb-2">DoorDash</h3>
+          <p class="card-meta">Reliable delivery service you can trust</p>
+        </div>
+
+        <a
+          href={doorDashUrl}
+          target="_blank"
+          rel="noreferrer"
+          class="w-full mt-2 inline-flex items-center justify-center gap-2 rounded-xl px-5 py-3 text-base font-semibold text-accent-foreground bg-accent hover:bg-accent/90 transition-colors"
+        >
+          <svg
+            xmlns="http://www.w3.org/2000/svg"
+            viewBox="0 0 24 24"
+            fill="none"
+            stroke="currentColor"
+            stroke-width="2"
+            stroke-linecap="round"
+            stroke-linejoin="round"
+            class="w-5 h-5"
+            aria-hidden="true"
+          >
+            <rect width="14" height="20" x="5" y="2" rx="2" ry="2"></rect>
+            <path d="M12 18h.01"></path>
+          </svg>
+          <span>Order on DoorDash</span>
+        </a>
+
+        <p class="card-meta mt-4">Usually ready in 15-25 minutes</p>
+      </article>
+    </div>
+
+    <div class="text-center mt-8">
+      <p class="text-muted-foreground">
+        <strong>Pickup Available:</strong> Call ahead and your order will be ready when you arrive!
+      </p>
+    </div>
+  </div>
+</section>

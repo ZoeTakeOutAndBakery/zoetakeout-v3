@@ -1,0 +1,61 @@
+---
+const { hours } = Astro.props;
+
+const formatTime = (value) => {
+  if (!value) return "";
+  const normalized = String(value).trim().toUpperCase();
+  const match = normalized.match(/^(\d{1,2})(?::(\d{2}))?\s*(AM|PM)$/);
+
+  if (!match) return value;
+
+  const hour = match[1];
+  const minute = match[2] ?? "00";
+  const period = match[3];
+
+  return `${hour}:${minute} ${period}`;
+};
+---
+<section id="hours" class="py-16 bg-section-bg">
+  <div class="page-container">
+    <div class="text-center mb-10 md:mb-12">
+      <h2 class="text-4xl md:text-6xl font-bold text-primary leading-tight">Hours of Operation</h2>
+      <p class="mt-4 text-muted-foreground text-lg max-w-4xl mx-auto leading-snug">
+        We&apos;re here to serve you fresh baked goods and delicious meals throughout the week
+      </p>
+    </div>
+
+    <div class="card-base max-w-2xl mx-auto bg-background shadow-none">
+      <div class="flex items-center justify-center gap-3 mb-5 md:mb-6">
+        <svg
+          xmlns="http://www.w3.org/2000/svg"
+          viewBox="0 0 24 24"
+          fill="none"
+          stroke="hsl(var(--accent))"
+          stroke-width="2.25"
+          class="w-8 h-8 md:w-9 md:h-9"
+          aria-hidden="true"
+        >
+          <circle cx="12" cy="12" r="9" />
+          <path d="M12 7v6l4 2" stroke-linecap="round" stroke-linejoin="round" />
+        </svg>
+        <h3 class="card-title">Store Hours</h3>
+      </div>
+
+      <div class="card-grid">
+        {(hours || []).map((entry) => (
+          <div class="flex items-center justify-between border-b border-border pb-3 md:pb-4 last:border-b-0 last:pb-0">
+            <span class="card-body font-semibold">{entry.label}</span>
+            <span class="card-body text-muted-foreground">
+              {formatTime(entry.open)} - {formatTime(entry.close)} {"\u00b7"}{" "}
+              {entry.closed ? (
+                <span class="font-bold text-red-600">Closed</span>
+              ) : (
+                <span class="font-bold text-emerald-600">Open</span>
+              )}
+            </span>
+          </div>
+        ))}
+      </div>
+    </div>
+  </div>
+</section>

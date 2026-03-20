@@ -1,0 +1,88 @@
+---
+const { orderUrl } = Astro.props;
+import { sanitizeExternalUrl } from "../lib/urlSafety.js";
+
+const navigation = [
+  { name: "Home", href: "/" },
+  { name: "Menu", href: "/menu" },
+  { name: "Reservations", href: "/#reservations" },
+  { name: "Contact", href: "/#contact" },
+];
+
+const safeOrderUrl = sanitizeExternalUrl(orderUrl, {
+  fallback: "/menu",
+  allowedHosts: ["doordash.com"],
+});
+---
+<header class="sticky top-0 z-50 bg-background/95 backdrop-blur-sm border-b border-border" role="banner">
+  <div class="container mx-auto px-4">
+    <div class="flex items-center justify-between h-16">
+      <a href="/" class="flex items-center space-x-3">
+        <div class="w-10 h-10 flex items-center justify-center">
+          <img
+            src="https://res.cloudinary.com/ddmq5t27j/image/upload/v1756657268/ZoeLogoNavBarEdit_zafzhh.png"
+            alt="Zoe Take Out & Bakery Logo"
+            class="w-10 h-10 object-contain"
+            loading="lazy"
+          />
+        </div>
+        <div class="hidden sm:block">
+          <span class="text-xl font-bold text-primary leading-tight">
+            Zoe Take Out<br />
+            <span class="text-accent">& Bakery</span>
+          </span>
+        </div>
+        <div class="sm:hidden">
+          <span class="text-lg font-bold text-primary">
+            Zoe <span class="text-accent">Bakery</span>
+          </span>
+        </div>
+      </a>
+
+      <nav class="hidden md:flex items-center space-x-6">
+        {navigation.map((item) => (
+          <a
+            href={item.href}
+            class="text-sm font-medium transition-colors hover:text-accent text-foreground"
+          >
+            {item.name}
+          </a>
+        ))}
+        <a
+          href={safeOrderUrl}
+          target="_blank"
+          rel="noreferrer"
+          class="ml-4 inline-flex items-center justify-center rounded-md border border-border px-4 py-2 text-sm font-medium text-foreground transition-colors hover:bg-secondary"
+        >
+          Order Online
+        </a>
+      </nav>
+
+      <details class="md:hidden group">
+        <summary class="list-none inline-flex items-center justify-center rounded-md border border-border px-3 py-2 text-sm font-medium text-foreground cursor-pointer">
+          Menu
+        </summary>
+        <div class="mt-3 rounded-md border border-border bg-background p-4">
+          <nav class="flex flex-col space-y-2">
+            {navigation.map((item) => (
+              <a
+                href={item.href}
+                class="px-2 py-2 text-sm font-medium transition-colors hover:text-accent text-foreground"
+              >
+                {item.name}
+              </a>
+            ))}
+            <a
+              href={safeOrderUrl}
+              target="_blank"
+              rel="noreferrer"
+              class="mt-2 w-fit inline-flex items-center justify-center rounded-md border border-border px-4 py-2 text-sm font-medium text-foreground transition-colors hover:bg-secondary"
+            >
+              Order Online
+            </a>
+          </nav>
+        </div>
+      </details>
+    </div>
+  </div>
+</header>
