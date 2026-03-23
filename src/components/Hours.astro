@@ -46,11 +46,13 @@ const formatTime = (value) => {
           <div class="flex items-center justify-between border-b border-border pb-3 md:pb-4 last:border-b-0 last:pb-0">
             <span class="card-body font-semibold">{entry.label}</span>
             <span class="card-body text-muted-foreground">
-              {formatTime(entry.open)} - {formatTime(entry.close)} {"\u00b7"}{" "}
               {entry.closed ? (
                 <span class="font-bold text-red-600">Closed</span>
               ) : (
-                <span class="font-bold text-emerald-600">Open</span>
+                <>
+                  {formatTime(entry.open)} - {formatTime(entry.close)} {"\u00b7"}{" "}
+                  <span class="font-bold text-emerald-600">Open</span>
+                </>
               )}
             </span>
           </div>

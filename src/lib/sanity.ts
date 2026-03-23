@@ -3,6 +3,8 @@ import { createClient } from "@sanity/client";
 const projectId = import.meta.env.SANITY_PROJECT_ID || process.env.SANITY_PROJECT_ID;
 const dataset = import.meta.env.SANITY_DATASET || process.env.SANITY_DATASET || "production";
 const apiVersion = import.meta.env.SANITY_API_VERSION || process.env.SANITY_API_VERSION || "2025-01-01";
+const useCdnEnv = import.meta.env.SANITY_USE_CDN || process.env.SANITY_USE_CDN;
+const useCdn = String(useCdnEnv ?? "false").toLowerCase() === "true";
 
 if (!projectId) {
   throw new Error("Missing SANITY_PROJECT_ID. Add it to your environment variables.");
@@ -12,7 +14,7 @@ export const sanityClient = createClient({
   projectId,
   dataset,
   apiVersion,
-  useCdn: true,
+  useCdn,
 });
 
 export const queries = {
